@@ -1,10 +1,4 @@
 module Dogy
-
-  def self.set_args(m,arg)
-    if m[:args].length < m[:size]
-      m[:args] << arg
-    end
-  end
   
   def self.parse(args,location)
     list = []
@@ -19,12 +13,13 @@ module Dogy
         }
         list << m
       elsif m
-        set_args(m,arg)
+        m[:args] << arg if m[:args].length < m[:size]
       end
     end
-      list
+    list
   end
-
+  
+  
   def self.eat(args,location)
     result = []
     parse(args,location).each do |m|
@@ -33,5 +28,5 @@ module Dogy
     end
     result
   end
-
+  
 end
