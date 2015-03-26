@@ -4,7 +4,7 @@ module Dogy
     list = []
     m = nil
     args.each do |arg|
-      if !m && location.private_methods.include?(arg.to_sym)
+      if location.private_methods.include?(arg.to_sym)
         method = location.method(arg.to_sym)
         m = {
           :method => method,
