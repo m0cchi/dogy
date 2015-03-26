@@ -6,12 +6,13 @@ require 'dogy/version'
 Gem::Specification.new do |spec|
   spec.name          = "dogy"
   spec.version       = Dogy::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
+  spec.authors       = ["mocchi"]
+  spec.email         = ["boom.boom.planet@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{create command line tools}
+  spec.description   = %q{create command line tools}
+  spec.homepage      = "https://github.com/mocchit/dogy"
+  spec.license       = "GPLv3"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
@@ -19,7 +20,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
+    spec.metadata['allowed_push_host'] = "https://rubygems.org"
   end
 
   spec.add_development_dependency "bundler", "~> 1.9"
