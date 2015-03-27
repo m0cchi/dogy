@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require 'dogy/dogylib'
+
+EXEC_DIR = Dir.pwd
+
+if ARGV.length > 0
+  target = ARGV.shift
+  require_relative  EXEC_DIR + '/' + target
+  puts Dogy::eat(ARGV,self)
+end
